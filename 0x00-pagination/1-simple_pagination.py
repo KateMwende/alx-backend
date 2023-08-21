@@ -7,7 +7,7 @@ import math
 from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> float:
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Return tuple of start and end idx of a list"""
     start_index = (page - 1) * page_size
     end_index = page * page_size
