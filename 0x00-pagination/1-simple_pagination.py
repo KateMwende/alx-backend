@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-
+Read a csv file
 """
 import csv
 import math
@@ -44,4 +44,4 @@ class Server:
 
         if start_index > len(dataset):
             return []
-        return dataset[start_index: end_index]
+        return dataset[start_index:end_index]
