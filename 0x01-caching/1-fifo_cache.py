@@ -30,4 +30,6 @@ class FIFOCache(BaseCaching):
         """Get value of key in self.cache_data"""
         if key is None or self.cache_data.get(key) is None:
             return None
+        self.queue.remove(key)
+        self.queue.append(key)
         return self.cache_data[key]
