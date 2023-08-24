@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Least recently used algorithm
+Most recently used algorithm
 """
 from base_caching import BaseCaching
 from collections import deque
 
 
 class MRUCache(BaseCaching):
-    """Remove least recently used"""
+    """Remove most recently used"""
     def __init__(self):
         """Initialize but with BaseCaching"""
         super().__init__()
