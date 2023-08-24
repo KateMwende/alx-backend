@@ -17,7 +17,7 @@ class FIFOCache(BaseCaching):
     def put(self, key, item):
         """Put the item in self.cache_data[key]"""
         if item is None or key is None:
-            pass
+            return
         else:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 oldest_key = self.queue.popleft()
