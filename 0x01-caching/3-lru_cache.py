@@ -25,7 +25,7 @@ class LRUCache(BaseCaching):
                     del self.cache_data[least_used]
                     break
 
-            print("Discard: {}".format(least_used))
+            print("DISCARD: {}".format(least_used))
         self.queue.append(key)
         self.cache_data[key] = item
 
