@@ -8,6 +8,7 @@ from flask import Flask, render_template
 app = Flask(__name__, template_folder="templates")
 babel = Babel(app)
 
+
 class Config(object):
     """config for your Flask app"""
     LANGUAGES = ['en', 'fr']
