@@ -15,6 +15,7 @@ client.on('error', (err) => {
   console.log('Redis client not connected to the server: ${err.message}');
 });
 
+// set key with value
 function setNewSchool(schoolName, value) {
   client.set(schoolName, value, redis.print);
 };
@@ -22,6 +23,7 @@ function setNewSchool(schoolName, value) {
 // promiisfy the redis get method
 const getAsync = util.promisify(client.get).bind(client);
 
+// display value of key
 async function displaySchoolValue(schoolName) {
   const result = await getAsync(schoolName).catch((error, result) => {
     if (error) {
@@ -32,6 +34,7 @@ async function displaySchoolValue(schoolName) {
   console.log(result);
 };
 
+// call the function
 displaySchoolValue('Holberton');
 setNewSchool('HolbertonSanFrancisco', '100');
 displaySchoolValue('HolbertonSanFrancisco');
