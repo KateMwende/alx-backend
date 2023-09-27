@@ -14,9 +14,9 @@ client.subscribe('holberton school channel');
 
 client.on('message', (channel, message) => {
   console.log(`Received ${message} on ${channel}`);
-});
 
-if (message === 'KILL_SERVER') {
-  client.unsubscribe();
-  client.quit();
+  if (message === 'KILL_SERVER') {
+    client.unsubscribe();
+    client.quit();
 }
+});
